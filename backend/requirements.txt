@@ -1,0 +1,15 @@
+# QubitEdge Backend — Python Dependencies
+
+# Web framework
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# Quantum simulation
+qiskit==1.2.4
+qiskit-aer==0.15.0
+
+google-generativeai==0.8.3
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.9.2
