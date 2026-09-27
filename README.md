@@ -50,7 +50,7 @@ cd frontend
 npm install
 
 # Configure environment
-copy .env.local.example .env.local
+
 
 # Start the dev server
 npm run dev
@@ -76,19 +76,6 @@ Open **http://localhost:3000**
 
 ### Backend (`backend/.env`)
 
-| Variable | Default | Description |
-|---|---|---|
-| `GEMINI_API_KEY` | *(empty)* | Google Gemini key — [get one free](https://aistudio.google.com) |
-| `GEMINI_MODEL` | `gemini-1.5-flash` | Which Gemini model to use |
-| `ALLOWED_ORIGINS` | `http://localhost:3000` | Comma-separated CORS origins |
-
-### Frontend (`frontend/.env.local`)
-
-| Variable | Default | Description |
-|---|---|---|
-| `NEXT_PUBLIC_API_URL` | `http://localhost:8000` | Backend API base URL |
-
----
 
 ## API Reference
 
@@ -123,7 +110,4 @@ pytest tests/ -v
 
 ---
 
-## Deployment
 
-- **Backend:** Docker image → Hugging Face Spaces (free tier)
-- **Frontend:** `npm run build` → Vercel / Cloudflare Pages (free tier)
