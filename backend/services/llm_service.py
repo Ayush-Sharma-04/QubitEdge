@@ -2,7 +2,6 @@
 llm_service.py
 --------------
 Gemini API adapter with mock fallback.
-Set GEMINI_API_KEY in .env to enable real LLM responses.
 """
 from __future__ import annotations
 

@@ -47,6 +47,12 @@ class SimulationResult(BaseModel):
     statevector: Optional[List[List[float]]] = Field(
         None, description="Statevector as list of [real, imag] pairs"
     )
+    bloch_vectors: Optional[List[List[float]]] = Field(
+        None, description="Per-qubit Bloch vector [x, y, z] derived from reduced density matrix"
+    )
+    unitary: Optional[List[List[List[float]]]] = Field(
+        None, description="Circuit unitary matrix as 2D list of [real, imag] pairs"
+    )
     num_qubits: int = Field(..., description="Number of qubits in the circuit")
     gate_count: int = Field(..., description="Total gates applied")
     shots: int = Field(..., description="Shots used for this simulation")

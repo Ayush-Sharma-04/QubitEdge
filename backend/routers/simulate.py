@@ -1,7 +1,5 @@
 """
 simulate.py — /api/simulate and /api/v1/simulate/sync router
-
-Blueprint spec: Primary endpoint is /api/v1/simulate/sync
 Legacy endpoint /api/simulate is kept for backwards compatibility.
 """
 from __future__ import annotations
@@ -30,10 +28,16 @@ async def _execute_simulation(request: SimulateRequest) -> SimulateResponse:
                 # Empty circuit — return |0...0> ground state
                 n = request.num_qubits or 1
                 zero = "0" * n
+                dim = 2 ** n
                 result = SimulationResult(
                     counts={zero: request.shots},
                     probabilities={zero: 1.0},
-                    statevector=[[1.0, 0.0]] + [[0.0, 0.0]] * (2 ** n - 1),
+                    statevector=[[1.0, 0.0]] + [[0.0, 0.0]] * (dim - 1),
+                    bloch_vectors=[[0.0, 0.0, 1.0]] * n,
+                    unitary=[
+                        [[1.0 if r == c else 0.0, 0.0] for c in range(dim)]
+                        for r in range(dim)
+                    ],
                     num_qubits=n,
                     gate_count=0,
                     shots=request.shots,
