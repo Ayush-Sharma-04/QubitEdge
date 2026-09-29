@@ -21,9 +21,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
-# App
-# ---------------------------------------------------------------------------
 
 app = FastAPI(
     title="QubitEdge API",
@@ -50,17 +47,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ---------------------------------------------------------------------------
 # Routers
-# ---------------------------------------------------------------------------
-
 app.include_router(simulate.router, prefix="/api", tags=["Simulation"])
 app.include_router(ai.router, prefix="/api/ai", tags=["AI Tutor"])
 
-# ---------------------------------------------------------------------------
-# Health
-# ---------------------------------------------------------------------------
 
+# Health
 @app.get("/health", tags=["Health"], summary="Health check")
 async def health() -> dict:
     """Returns server status and dependency availability."""

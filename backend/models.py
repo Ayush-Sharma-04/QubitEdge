@@ -3,9 +3,8 @@ from typing import Dict, List, Optional, Literal, Any
 from pydantic import BaseModel, Field, field_validator
 
 
-# ---------------------------------------------------------------------------
+
 # Simulation Models
-# ---------------------------------------------------------------------------
 
 class GateOp(BaseModel):
     """Represents a single quantum gate operation in a visual circuit."""
@@ -64,9 +63,8 @@ class SimulateResponse(BaseModel):
     error: Optional[str] = None
 
 
-# ---------------------------------------------------------------------------
+
 # AI Tutor Models
-# ---------------------------------------------------------------------------
 
 class TutorContext(BaseModel):
     """Workspace context automatically injected alongside the user's message."""

@@ -76,7 +76,7 @@ def _mock_response(message: str, context_block: str) -> str:
     has_context = bool(context_block)
     if has_context:
         return (
-            "📡 AI Tutor is in demo mode (no GEMINI_API_KEY set).\n\n"
+            " AI Tutor is in demo mode (no GEMINI_API_KEY set).\n\n"
             "I can see your circuit context! Once you add a Gemini API key to the backend "
             "`.env` file, I'll be able to give you a real explanation of your results.\n\n"
             "In the meantime: if your histogram shows roughly 50% |00⟩ and 50% |11⟩, "
@@ -85,7 +85,7 @@ def _mock_response(message: str, context_block: str) -> str:
             "deterministic result instead!"
         )
     return (
-        "📡 AI Tutor is in demo mode (no GEMINI_API_KEY set).\n\n"
+        "AI Tutor is in demo mode (no GEMINI_API_KEY set).\n\n"
         "Add your Google Gemini API key to `backend/.env` as `GEMINI_API_KEY=your_key_here` "
         "to enable real AI tutoring. You can get a free key at https://aistudio.google.com."
     )
@@ -138,6 +138,6 @@ def chat(
     except Exception as exc:
         logger.error("Gemini API call failed: %s", exc)
         return (
-            f"⚠️ AI Tutor encountered an error: {exc}\n\n"
+            f" AI Tutor encountered an error: {exc}\n\n"
             "Please check your GEMINI_API_KEY and network connection."
         )

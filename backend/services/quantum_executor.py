@@ -66,10 +66,10 @@ def _infer_num_qubits(gates: List[GateOp], explicit: Optional[int]) -> int:
     return min(max(all_q) + 1, 5)
 
 
-# ---------------------------------------------------------------------------
-# ---------------------------------------------------------------------------
+
+
 # Statevector & Bloch vector calculation
-# ---------------------------------------------------------------------------
+
 
 def _extract_statevector(qc_no_measure: "QuantumCircuit") -> Optional["np.ndarray"]:
     """
@@ -131,9 +131,9 @@ def _bloch_vector_from_array(sv_array: "np.ndarray", qubit: int, num_qubits: int
     return [bx, by, bz]
 
 
-# ---------------------------------------------------------------------------
+
 # Unitary helper
-# ---------------------------------------------------------------------------
+
 
 def _get_unitary(qc_no_measure: "QuantumCircuit") -> Optional[List[List[List[float]]]]:
     """Extract the unitary matrix of a measurement-free circuit."""

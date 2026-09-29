@@ -74,9 +74,8 @@ async def _execute_simulation(request: SimulateRequest) -> SimulateResponse:
         )
 
 
-# ---------------------------------------------------------------------------
+
 # Legacy endpoint (backwards compatible)
-# ---------------------------------------------------------------------------
 
 @router.post(
     "/simulate",
@@ -89,9 +88,8 @@ async def simulate_legacy(request: SimulateRequest) -> SimulateResponse:
     return await _execute_simulation(request)
 
 
-# ---------------------------------------------------------------------------
+
 # Versioned endpoint — blueprint spec: /api/v1/simulate/sync
-# ---------------------------------------------------------------------------
 
 @router.post(
     "/v1/simulate/sync",

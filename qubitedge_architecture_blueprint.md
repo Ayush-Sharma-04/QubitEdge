@@ -39,7 +39,7 @@
 
 ## 2. Frontend Architecture (React.js / Vite)
 
-* **Core Framework:** React.js built with Vite for optimized hot-module replacement and fast build times.
+* **Core Framework:** Next.js 14 with TypeScript, React for optimized hot-module replacement and fast build times.
 * **Routing Strategy:** React Router handling public pages, hybrid pages, and protected routes using authentication guards.
 * **Workspace Components:**
   * **Visual Composer:** React Flow implementation for the drag-and-drop circuit canvas, managing gate nodes and wire connections.
