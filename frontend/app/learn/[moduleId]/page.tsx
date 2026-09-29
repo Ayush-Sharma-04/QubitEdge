@@ -8,10 +8,10 @@ import {
   BookOpen, Zap, ClipboardCheck, ArrowLeft, ArrowRight,
   CheckCircle2, Lock, LogOut, User, ChevronRight,
 } from 'lucide-react';
+import Image from 'next/image';
+import WordMark from '@/public/logo/WordMark.svg';
 
-// ---------------------------------------------------------------------------
 // Module content data
-// ---------------------------------------------------------------------------
 
 interface QuizQuestion {
   id: number;
@@ -296,8 +296,9 @@ export default function ModulePage() {
       {/* Navbar */}
       <nav className="navbar" style={{ position: 'sticky', top: 0, zIndex: 50 }}>
         <Link href="/" className="navbar-logo">
-          <span className="navbar-q">Q</span>
-          <span className="navbar-brand">QubitEdge</span>
+          {/* <span className="navbar-q">Q</span>
+          <span className="navbar-brand">QubitEdge</span> */}
+          <Image src= {WordMark} alt = "Logo"className='h-10 w-auto' />
           <span className="navbar-page-badge navbar-page-badge-learn">
             <span>Learn</span>
           </span>
@@ -478,7 +479,7 @@ export default function ModulePage() {
             </div>
           )}
 
-          {/* ── Activity ── */}
+          {/* Activity */}
           {activeSection === 'activity' && (
             <div>
               <h1 style={{

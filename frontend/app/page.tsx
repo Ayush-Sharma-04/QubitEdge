@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { LogIn, LogOut, User, BookOpen, Cpu, Zap } from 'lucide-react';
 import { useAuth } from '@/lib/auth-context';
 import { useAuthModal } from '@/components/auth/RootProviders';
+import Image from 'next/image';
+import tempLogoMark from '@/public/logo/tempLogoMark.svg';
 
 export default function HomePage() {
   const { user, isAuthenticated, isLoading, signOut } = useAuth();
@@ -15,8 +17,9 @@ export default function HomePage() {
       {/* Navbar */}
       <nav className="navbar" style={{ position: 'relative', zIndex: 10 }}>
         <Link href="/" className="navbar-logo">
-          <span className="navbar-q">Q</span>
-          <span className="navbar-brand">QubitEdge</span>
+          {/* <span className="navbar-q">Q</span>
+          <span className="navbar-brand">QubitEdge</span> */}
+          < Image src ={tempLogoMark} alt="Logo" className='w-8 h-auto' />
         </Link>
 
         <div className="navbar-links">

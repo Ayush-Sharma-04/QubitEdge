@@ -21,6 +21,8 @@ import {
   User,
   Lock,
 } from 'lucide-react';
+import WordMark from '@/public/logo/WordMark.svg';
+import Image from 'next/image';
 
 export default function BuildPage() {
   const sim = useSimulation();
@@ -45,8 +47,9 @@ export default function BuildPage() {
       {/* Navbar */}
       <nav className="navbar" style={{ height: '56px', padding: '0 32px', flexShrink: 0 }}>
         <Link href="/" className="navbar-logo">
-          <span className="navbar-q" style={{ fontSize: '1.7rem' }}>Q</span>
-          <span className="navbar-brand" style={{ fontSize: '1rem' }}>QubitEdge</span>
+          {/* <span className="navbar-q" style={{ fontSize: '1.7rem' }}>Q</span>
+          <span className="navbar-brand" style={{ fontSize: '1rem' }}>QubitEdge</span> */}
+          <Image src ={WordMark} alt="Logo" className='h-10 w-auto' />
           <span className="navbar-page-badge navbar-page-badge-build">
             <span>Build</span>
           </span>

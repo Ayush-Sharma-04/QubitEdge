@@ -1,9 +1,8 @@
 @import "tailwindcss";
 
-/* ============================================================
+/* 
    QubitEdge — Global Design System
-   Exact Figma spec: #4D2BBB primary, Kumbh Sans, amber glow
-   ============================================================ */
+   */
 
 
 :root {
@@ -123,9 +122,7 @@ body {
   z-index: 0;
 }
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
+/*  NAVBAR */
 .navbar {
   display: flex;
   align-items: center;

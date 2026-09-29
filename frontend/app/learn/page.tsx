@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { LogIn, LogOut, BookOpen, ArrowRight, Lock, User, CheckCircle } from 'lucide-react';
 import { useAuth } from '@/lib/auth-context';
 import { useAuthModal } from '@/components/auth/RootProviders';
+import Image from 'next/image';
+import WordMark from '@/public/logo/WordMark.svg';
 
 const MODULES = [
   {
@@ -71,8 +73,9 @@ export default function LearnPage() {
       {/* Navbar */}
       <nav className="navbar" style={{ position: 'sticky', top: 0, zIndex: 50 }}>
         <Link href="/" className="navbar-logo">
-          <span className="navbar-q">Q</span>
-          <span className="navbar-brand">QubitEdge</span>
+          {/* <span className="navbar-q">Q</span>
+          <span className="navbar-brand">QubitEdge</span> */}
+          <Image src= {WordMark} alt="Logo" className='h-10 w-auto' />
           <span className="navbar-page-badge navbar-page-badge-learn">
             <span>Learn</span>
           </span>
